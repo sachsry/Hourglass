@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HIO-mI-bIC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today's Visit-->
+        <scene sceneID="9EB-HH-Y8R">
+            <objects>
+                <viewController id="RxF-Ff-8HX" customClass="VisitViewController" customModule="Hourglass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sd4-iQ-yBU"/>
+                        <viewControllerLayoutGuide type="bottom" id="fLd-Ay-U4x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="idY-Me-MKZ" customClass="VisitView" customModule="Hourglass" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="Z6j-Xu-f1p">
+                                <rect key="frame" x="350" y="72" width="9" height="152"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwN-rf-dKB">
+                                        <rect key="frame" x="0.0" y="0.0" width="9" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i29-0v-C3T">
+                                        <rect key="frame" x="0.0" y="66.5" width="9" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4I-Ld-QJr">
+                                        <rect key="frame" x="0.0" y="132" width="9" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="i29-0v-C3T" firstAttribute="centerY" secondItem="Z6j-Xu-f1p" secondAttribute="centerY" id="hS6-pR-5RN"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="8o8-g1-fD0">
+                                <rect key="frame" x="16" y="72" width="117" height="152"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Reward:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7G-oS-8qK">
+                                        <rect key="frame" x="55" y="0.0" width="62" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visit Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuL-in-Vsw">
+                                        <rect key="frame" x="37" y="66.5" width="80" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points Needed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0J-sC-Yb4">
+                                        <rect key="frame" x="0.0" y="132" width="117" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OuL-in-Vsw" firstAttribute="centerY" secondItem="8o8-g1-fD0" secondAttribute="centerY" id="YSH-PX-1Vn"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bo-Ts-qtU">
+                                <rect key="frame" x="147.5" y="312.5" width="80" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="EMI-zC-xO6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNB-OX-MVG" customClass="HourGlassLogoView" customModule="Hourglass" customModuleProvider="target">
+                                <rect key="frame" x="67" y="375" width="240" height="284"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Redeem" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mx3-gt-33H">
+                                        <rect key="frame" x="44" y="32" width="153" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="mx3-gt-33H" firstAttribute="top" secondItem="dNB-OX-MVG" secondAttribute="top" constant="32" id="an7-f3-iTq"/>
+                                    <constraint firstItem="mx3-gt-33H" firstAttribute="leading" secondItem="dNB-OX-MVG" secondAttribute="leading" constant="44" id="dzU-PB-FqI"/>
+                                    <constraint firstItem="mx3-gt-33H" firstAttribute="centerX" secondItem="dNB-OX-MVG" secondAttribute="centerX" id="lIG-TY-HvR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fLd-Ay-U4x" firstAttribute="top" secondItem="Z6j-Xu-f1p" secondAttribute="bottom" constant="443" id="4df-Df-fhf"/>
+                            <constraint firstItem="3bo-Ts-qtU" firstAttribute="centerX" secondItem="dNB-OX-MVG" secondAttribute="centerX" id="6oJ-XC-nZL"/>
+                            <constraint firstItem="8o8-g1-fD0" firstAttribute="leading" secondItem="idY-Me-MKZ" secondAttribute="leadingMargin" id="Cfg-P2-mQo"/>
+                            <constraint firstItem="3bo-Ts-qtU" firstAttribute="centerY" secondItem="idY-Me-MKZ" secondAttribute="centerY" id="FGE-bq-FXG"/>
+                            <constraint firstItem="8o8-g1-fD0" firstAttribute="top" secondItem="Z6j-Xu-f1p" secondAttribute="top" id="GCJ-On-vEl"/>
+                            <constraint firstItem="fLd-Ay-U4x" firstAttribute="top" secondItem="dNB-OX-MVG" secondAttribute="bottom" constant="8" symbolic="YES" id="IXP-ti-pEl"/>
+                            <constraint firstItem="dNB-OX-MVG" firstAttribute="top" secondItem="idY-Me-MKZ" secondAttribute="top" constant="375" id="SES-hS-YpU"/>
+                            <constraint firstItem="dNB-OX-MVG" firstAttribute="centerX" secondItem="idY-Me-MKZ" secondAttribute="centerX" id="VBf-qq-iUZ"/>
+                            <constraint firstItem="8o8-g1-fD0" firstAttribute="top" secondItem="Sd4-iQ-yBU" secondAttribute="bottom" constant="8" symbolic="YES" id="eqk-8N-fOm"/>
+                            <constraint firstItem="dNB-OX-MVG" firstAttribute="leading" secondItem="idY-Me-MKZ" secondAttribute="leadingMargin" constant="51" id="gjO-wR-yBV"/>
+                            <constraint firstItem="8o8-g1-fD0" firstAttribute="bottom" secondItem="Z6j-Xu-f1p" secondAttribute="bottom" id="oR2-Cb-LpU"/>
+                            <constraint firstItem="Z6j-Xu-f1p" firstAttribute="trailing" secondItem="idY-Me-MKZ" secondAttribute="trailingMargin" id="spz-hu-WIh"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="deal" destination="iwN-rf-dKB" id="fMs-Xn-xLk"/>
+                            <outlet property="loyaltyPointsLabel" destination="3bo-Ts-qtU" id="Ls5-sg-SRy"/>
+                            <outlet property="loyaltyPointsRequiredLabel" destination="l4I-Ld-QJr" id="d1w-7c-9ha"/>
+                            <outlet property="remainingTime" destination="i29-0v-C3T" id="2oN-Qi-AOQ"/>
+                            <outlet property="visitTimeLabel" destination="OuL-in-Vsw" id="udO-sN-zKK"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Today's Visit" id="5Ek-yU-PkZ"/>
+                    <connections>
+                        <outlet property="logoView" destination="dNB-OX-MVG" id="tH8-Vz-ztW"/>
+                        <outlet property="timerView" destination="idY-Me-MKZ" id="bC0-J3-vK3"/>
+                        <outlet property="visitView" destination="idY-Me-MKZ" id="8gX-ab-LQn"/>
+                        <segue destination="YKg-UL-Y7O" kind="presentation" identifier="Redeem" id="Ws3-Up-2fU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vhx-C6-PyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1335.2" y="-70.614692653673174"/>
+        </scene>
+        <!--Redeem Coupon-->
+        <scene sceneID="ZIz-42-t8K">
+            <objects>
+                <viewController id="nWL-wh-Ejn" customClass="RedeemCouponViewController" customModule="Hourglass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xMr-jd-Nr4"/>
+                        <viewControllerLayoutGuide type="bottom" id="WXk-dV-d8y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GgU-jz-APR" customClass="RedeemCouponView" customModule="Hourglass" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-JY-1wN">
+                                <rect key="frame" x="0.0" y="167" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reward:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCf-gf-Roz">
+                                <rect key="frame" x="16" y="94" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Employee:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNK-iL-xt4">
+                                <rect key="frame" x="16" y="138" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Employee Below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPW-yB-di4">
+                                <rect key="frame" x="181" y="137" width="178" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Select Reward Below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95M-Yf-isX">
+                                <rect key="frame" x="181" y="94" width="178" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIG-9B-xZJ">
+                                <rect key="frame" x="106" y="401" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select Employee"/>
+                                <connections>
+                                    <action selector="selectOrUnselectEmployee:" destination="nWL-wh-Ejn" eventType="touchUpInside" id="jjP-1g-1ny"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oab-df-Sex">
+                                <rect key="frame" x="133" y="472" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Display Coupon"/>
+                                <connections>
+                                    <action selector="redeemReward:" destination="nWL-wh-Ejn" eventType="touchUpInside" id="EdW-aE-ixT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="employeeLabel" destination="nPW-yB-di4" id="QzG-kq-rtC"/>
+                            <outlet property="redeemButton" destination="oab-df-Sex" id="o3h-6w-2pi"/>
+                            <outlet property="rewardLabel" destination="95M-Yf-isX" id="kIG-UT-K7K"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Redeem Coupon" id="yjy-xX-dMv">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="OUd-eY-zBL">
+                            <connections>
+                                <action selector="cancelRedemption:" destination="nWL-wh-Ejn" id="jQj-gk-1VG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="employeePicker" destination="cZ7-JY-1wN" id="Aqe-8R-EOo"/>
+                        <outlet property="redeemCouponView" destination="GgU-jz-APR" id="wCx-oK-xe7"/>
+                        <segue destination="eEU-Vm-xc4" kind="presentation" identifier="Display Coupon" id="B7n-2K-QZz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DP8-rG-Rc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3042.4000000000001" y="-69.715142428785612"/>
+        </scene>
+        <!--Hourglass Coupon-->
+        <scene sceneID="EUG-Zm-WlI">
+            <objects>
+                <viewController id="YaN-sT-tL3" customClass="DisplayCouponViewController" customModule="Hourglass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L4Z-EC-Pa3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rql-X6-UPB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="efw-TP-x9c" customClass="DisplayCouponView" customModule="Hourglass" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEm-hH-1H3">
+                                <rect key="frame" x="85" y="495" width="188" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reward:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOe-Ax-iYW">
+                                <rect key="frame" x="16" y="86" width="136" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Employee:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQg-dy-MYd">
+                                <rect key="frame" x="16" y="129" width="152" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Stamp:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-EI-k2G">
+                                <rect key="frame" x="16" y="180" width="168" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4C4-zd-ofY">
+                                <rect key="frame" x="160" y="86" width="199" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-q7-VLY">
+                                <rect key="frame" x="160" y="136" width="199" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b9-7Y-fQv">
+                                <rect key="frame" x="192" y="185" width="167" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="employeeLabel" destination="c5c-q7-VLY" id="lzd-mX-lcs"/>
+                            <outlet property="remainingTime" destination="iEm-hH-1H3" id="oS8-ls-Og2"/>
+                            <outlet property="rewardLabel" destination="4C4-zd-ofY" id="gbS-Yw-fwo"/>
+                            <outlet property="timeStampLabel" destination="9b9-7Y-fQv" id="gao-RT-8AF"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hourglass Coupon" id="0d3-5c-GaV">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Or0-lo-AsA">
+                            <connections>
+                                <segue destination="n97-Ne-lq2" kind="unwind" unwindAction="unwindToVisitWithSegue:" id="vGD-4s-UDg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="couponView" destination="efw-TP-x9c" id="Oxd-an-4xF"/>
+                        <outlet property="timerView" destination="efw-TP-x9c" id="tXS-hr-xXN"/>
+                        <segue destination="n97-Ne-lq2" kind="unwind" identifier="Go Back to Visit" unwindAction="unwindToVisitWithSegue:" id="Nl8-Em-h0s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xc-tE-ucw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="n97-Ne-lq2" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4631.1999999999998" y="-70.614692653673174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qva-9A-o5v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YKg-UL-Y7O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oEt-FO-hZB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nWL-wh-Ejn" kind="relationship" relationship="rootViewController" id="60i-2C-jyn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utZ-Wr-CaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2103.1999999999998" y="-69.715142428785612"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uXp-d0-xNB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eEU-Vm-xc4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wj8-a8-PdD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YaN-sT-tL3" kind="relationship" relationship="rootViewController" id="s0L-IA-TdA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIi-jJ-N0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3770.4000000000001" y="-70.614692653673174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mxa-qx-36M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vk0-fA-MOn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JuG-BA-yEl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RxF-Ff-8HX" kind="relationship" relationship="rootViewController" id="iGh-FG-aXM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NM1-Ra-zD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="-70.614692653673174"/>
+        </scene>
+        <!--Hourglass-->
+        <scene sceneID="a2S-OF-yxp">
+            <objects>
+                <viewController id="Gp7-aM-rgQ" customClass="GPXViewController" customModule="Hourglass" customModuleProvider="target" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="P2g-wg-CCx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                    <navigationItem key="navigationItem" title="Hourglass" id="1os-5n-BLz"/>
+                    <connections>
+                        <outlet property="mapView" destination="P2g-wg-CCx" id="fWf-zR-u3P"/>
+                        <segue destination="vk0-fA-MOn" kind="show" identifier="View Bar Information" id="JcB-dz-SfA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8n0-t4-5ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-456.80000000000001" y="-70.614692653673174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xfs-CQ-QqC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HIO-mI-bIC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0xK-Lh-9BG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gp7-aM-rgQ" kind="relationship" relationship="rootViewController" id="7nH-RH-4as"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7th-pO-JOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1396" y="-70.614692653673174"/>
+        </scene>
+    </scenes>
+</document>
