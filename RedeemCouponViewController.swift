@@ -64,13 +64,6 @@ class RedeemCouponViewController: UIViewController, UIPickerViewDelegate, UIPick
             selectedEmployee = employees?[row]
             return employees?[row]
         } else {
-//            if let reward = redeemableRewards?[row] {
-//                let parse = reward.components(separatedBy: " ")
-//                if let cost = Int(parse.last!) {
-//                    numberOfPointsForDeal = cost
-//                }
-//            
-//            }
             selectedDeal = deals[row]
             return redeemableRewards?[row]
         }
@@ -88,12 +81,6 @@ class RedeemCouponViewController: UIViewController, UIPickerViewDelegate, UIPick
         if component > 0 {
             label.font = UIFont(name: "Helvetica", size: 17.0)
             label.text = redeemableRewards?[row]
-//            if let reward = redeemableRewards?[row] {
-//                let parse = reward.components(separatedBy: " ")
-//                if let cost = Int(parse.last!) {
-//                    numberOfPointsForDeal = cost
-//                }
-//            }
             selectedDeal = deals[row]
         } else {
             label.font = UIFont(name: "Helvetica", size: 25.0)
@@ -173,8 +160,6 @@ class RedeemCouponViewController: UIViewController, UIPickerViewDelegate, UIPick
         super.viewDidLoad()
         employeePicker.delegate = self
         employeePicker.dataSource = self
-        redeemCouponView.setRewardText(rewardName: rewardName!)
-        // HIDE REDEEM BUTTON
     }
     
 
@@ -187,7 +172,7 @@ class RedeemCouponViewController: UIViewController, UIPickerViewDelegate, UIPick
             switch identifier {
             case Constants.DisplayCouponSegue:
                 if let dcvc = segue.destination.contentViewController as? DisplayCouponViewController {
-                    dcvc.setCouponText(rewardName: rewardName!, employeeName: selectedEmployee!)
+                    dcvc.setCouponText(reward: selectedDeal!, employeeName: selectedEmployee!)
                 }
                 
             default:

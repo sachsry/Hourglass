@@ -14,9 +14,11 @@ class DisplayCouponViewController: TimerViewController {
     
     private var rewardName: String?
     private var employeeName: String?
+    private var loyaltyPoints: Int?
     
-    func setCouponText(rewardName: String, employeeName: String) {
-        self.rewardName = rewardName
+    func setCouponText(reward: Deal, employeeName: String) {
+        self.rewardName = reward.getName()
+        self.loyaltyPoints = reward.getRequiredLoyaltyPointsForDeal()
         self.employeeName = employeeName
     }
     
@@ -47,6 +49,8 @@ class DisplayCouponViewController: TimerViewController {
             case Constants.UnwindSegue:
                 if let vvc = segue.destination.contentViewController as? VisitViewController {
                     // let the controller know which reward we redeemed so it can adjust points accordingly
+                    print("changed points")
+                    vvc.decreaseLoyaltyPoints(points: loyaltyPoints!)
                 }
                 
             default:

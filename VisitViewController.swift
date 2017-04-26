@@ -138,10 +138,10 @@ class VisitViewController: TimerViewController, UIPopoverPresentationControllerD
     }
     
     @IBAction func unwindToVisit(segue: UIStoryboardSegue) {
-        // bar?.restartVisits(visits: (currentDeal?.getRequiredVisits())!)
-        currentLoyaltyPointsForBar = 0
+//        print("just unwinded and the amount is \(currentLoyaltyPointsForBar)")
         manageRedeemableRewards()
         manageTapGestureRecognizer()
+        visitView.updateLoyaltyPoints(withPoints: currentLoyaltyPointsForBar)
     }
     
     private var currentLoyaltyPointsForBar = 0
@@ -158,6 +158,9 @@ class VisitViewController: TimerViewController, UIPopoverPresentationControllerD
         return !redeemableRewardsForUser.isEmpty
     }
     
+    func decreaseLoyaltyPoints(points: Int) {
+        currentLoyaltyPointsForBar -= points
+    }
     
     
     // MARK: - Navigation
