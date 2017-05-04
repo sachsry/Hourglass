@@ -99,7 +99,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         // let allBars = [query for bars here]
         // for bar in allBars
         // create/add waypoint (you can keep the lines below)
-        let point = BarWaypoint(name: "RJ Bentleys", barInfo: "Best Bar in CP", latitude: 38.980481, longitude: -76.937557)
+        let point = BarWaypoint(name: "RJ Bentley's", barInfo: "Best Bar in CP", latitude: 38.980481, longitude: -76.937557)
         waypoints.append(point)
         // END
         

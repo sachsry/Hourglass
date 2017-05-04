@@ -67,6 +67,8 @@ class VisitViewController: TimerViewController, UIPopoverPresentationControllerD
             let b = bar!
             currentLoyaltyPointsForBar += b.getVisitPoints()
             visitView.updateLoyaltyPoints(withPoints: currentLoyaltyPointsForBar)
+            logoView.sandEarned = CGFloat(currentLoyaltyPointsForBar / currentDeal!.getRequiredLoyaltyPointsForDeal())
+            visitView.setNeedsDisplay()
             manageRedeemableRewards()
             manageTapGestureRecognizer()
             
@@ -83,7 +85,7 @@ class VisitViewController: TimerViewController, UIPopoverPresentationControllerD
     // Set the 'employees' variable equal to the result
     
     private func setUpBar() {
-        bar = Bar(rate: 1, timeForVisit: 0.001)                                 // Replace with bar query
+        bar = Bar(rate: 1, timeForVisit: 0.003)                                 // Replace with bar query
         
         for (name, visits) in barDeals {                                        // Replace with bar query
             bar!.addDeal(deal: Deal(name: name, requiredVisitsForDeal: visits)) // Replace with bar query
@@ -100,6 +102,7 @@ class VisitViewController: TimerViewController, UIPopoverPresentationControllerD
             visitView.setTimer(hours: b.getTimeForVisit())
             currentDeal = deal
             visitView.updateUI(withNewDeal: deal)
+            logoView.sandEarned = CGFloat(CGFloat(currentLoyaltyPointsForBar) / CGFloat(deal!.getRequiredLoyaltyPointsForDeal()))
             manageRedeemableRewards()
             manageTapGestureRecognizer()
             startTimer(hours: b.getTimeForVisit(), rate: b.getHourGlassRate())
@@ -139,6 +142,7 @@ class VisitViewController: TimerViewController, UIPopoverPresentationControllerD
     
     @IBAction func unwindToVisit(segue: UIStoryboardSegue) {
 //        print("just unwinded and the amount is \(currentLoyaltyPointsForBar)")
+        logoView.sandEarned = 0
         manageRedeemableRewards()
         manageTapGestureRecognizer()
         visitView.updateLoyaltyPoints(withPoints: currentLoyaltyPointsForBar)

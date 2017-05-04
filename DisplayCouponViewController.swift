@@ -33,6 +33,7 @@ class DisplayCouponViewController: TimerViewController {
         performSegue(withIdentifier: Constants.UnwindSegue, sender: self)
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         couponView.setCouponAttributes(rewardName: rewardName!, employeeName: employeeName!)
@@ -40,6 +41,9 @@ class DisplayCouponViewController: TimerViewController {
         startTimer(hours: Constants.OneMinute, rate: Constants.NormalRate)
     }
 
+    @IBAction func done(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: Constants.UnwindSegue, sender: self)
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -54,7 +58,11 @@ class DisplayCouponViewController: TimerViewController {
                 }
                 
             default:
-                break
+                print("here")
+                if let vvc = segue.destination.contentViewController as? VisitViewController {
+                    // let the controller know which reward we redeemed so it can adjust points accordingly
+                    vvc.decreaseLoyaltyPoints(points: loyaltyPoints!)
+                }
             }
         }
 
