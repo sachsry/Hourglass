@@ -102,11 +102,21 @@ class VisitViewController: TimerViewController, UIPopoverPresentationControllerD
             visitView.setTimer(hours: b.getTimeForVisit())
             currentDeal = deal
             visitView.updateUI(withNewDeal: deal)
-            logoView.sandEarned = CGFloat(CGFloat(currentLoyaltyPointsForBar) / CGFloat(deal!.getRequiredLoyaltyPointsForDeal()))
+            logoView.sandEarned = 0
             manageRedeemableRewards()
             manageTapGestureRecognizer()
             startTimer(hours: b.getTimeForVisit(), rate: b.getHourGlassRate())
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        let deal = currentDeal!
+//        let sandEarned = CGFloat(CGFloat(currentLoyaltyPointsForBar) / CGFloat(deal.getRequiredLoyaltyPointsForDeal()))
+//        UIView.animate(withDuration: 1) { [weak weakSelf = self] in
+//            weakSelf?.logoView.sandEarned = sandEarned
+//        }
+
     }
     
     // Won't be needed once setUpBar() is altered
